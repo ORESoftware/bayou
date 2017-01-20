@@ -1,3 +1,6 @@
+'use strict';
+
+const flattenDeep = require('lodash/flattenDeep');
 import {Writable} from 'stream';
 
 const stdout = process.stdout;
@@ -5,9 +8,9 @@ const stderr = process.stderr;
 
 
 interface WritableInput {
-    both?: Writable[],
-    stdout?: Writable[],
-    stderr?: Writable[]
+    both?: Writable | Writable[],
+    stdout?: Writable | Writable[],
+    stderr?: Writable | Writable[]
 }
 
 
@@ -16,9 +19,9 @@ const defaultInput = {};
 
 export default function (input: WritableInput = defaultInput) {
 
-    const _stdout = input.stdout || [];
-    const _stderr = input.stderr || [];
-    const both = input.both || [];
+    const _stdout = flattenDeep(input.stdout || []);
+    const _stderr = flattenDeep(input.stderr || []);
+    const both = flattenDeep(input.both || []);
 
     const stdoutWrite = stdout.write;
 

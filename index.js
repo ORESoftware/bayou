@@ -1,12 +1,13 @@
-"use strict";
+'use strict';
+var flattenDeep = require('lodash/flattenDeep');
 var stdout = process.stdout;
 var stderr = process.stderr;
 var defaultInput = {};
 function default_1(input) {
     if (input === void 0) { input = defaultInput; }
-    var _stdout = input.stdout || [];
-    var _stderr = input.stderr || [];
-    var both = input.both || [];
+    var _stdout = flattenDeep(input.stdout || []);
+    var _stderr = flattenDeep(input.stderr || []);
+    var both = flattenDeep(input.both || []);
     var stdoutWrite = stdout.write;
     stdout.write = function () {
         for (var i = 0; i < _stdout.length; i++) {

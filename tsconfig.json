@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node","lodash.flattendeep"],
     "typeRoots": [ "node_modules/@types"],
     "compileOnSave": true,
     "target": "es5",
