@@ -25,5 +25,8 @@
   "homepage": "https://github.com/ORESoftware/bayou#readme",
   "dependencies": {
     "@types/node": "^7.0.0"
+  },
+  "devDependencies": {
+    "suman": "github:oresoftware/suman#dev"
   }
 }
