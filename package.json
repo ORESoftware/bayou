@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/ORESoftware/bayou/issues"
   },
-  "homepage": "https://github.com/ORESoftware/bayou#readme"
+  "homepage": "https://github.com/ORESoftware/bayou#readme",
+  "dependencies": {
+    "@types/node": "^7.0.0"
+  }
 }
