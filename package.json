@@ -1,0 +1,26 @@
+{
+  "name": "bayou",
+  "version": "0.0.1001",
+  "description": "Duplicate stdout and stderr streams",
+  "main": "index.js",
+  "scripts": {
+    "test": "suman"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ORESoftware/bayou.git"
+  },
+  "keywords": [
+    "streams",
+    "node",
+    "stdout",
+    "stderr",
+    "process.stdout"
+  ],
+  "author": "Olegzandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ORESoftware/bayou/issues"
+  },
+  "homepage": "https://github.com/ORESoftware/bayou#readme"
+}
