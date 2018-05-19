@@ -1,10 +1,10 @@
 {
   "name": "bayou",
-  "version": "0.0.1001",
+  "version": "0.0.1002",
   "description": "Duplicate stdout and stderr streams",
   "main": "index.js",
   "scripts": {
-    "test": "suman"
+    "test": "suman test"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,8 @@
     "url": "https://github.com/ORESoftware/bayou/issues"
   },
   "homepage": "https://github.com/ORESoftware/bayou#readme",
-  "dependencies": {
-    "@types/lodash.flattendeep": "^4.4.0",
-    "@types/node": "^7.0.0",
-    "lodash.flattendeep": "^4.4.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "suman": "github:oresoftware/suman#dev"
+    "@types/node": "^10.1.2"
   }
 }
