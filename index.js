@@ -1,13 +1,15 @@
 'use strict';
-var flattenDeep = require('lodash/flattenDeep');
+var flattenDeep = function (a) {
+    return a.reduce(function (acc, val) { return Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val); }, []);
+};
 var stdout = process.stdout;
 var stderr = process.stderr;
 var defaultInput = {};
 function default_1(input) {
     if (input === void 0) { input = defaultInput; }
-    var _stdout = flattenDeep(input.stdout || []);
-    var _stderr = flattenDeep(input.stderr || []);
-    var both = flattenDeep(input.both || []);
+    var _stdout = flattenDeep([input.stdout]).filter(Boolean);
+    var _stderr = flattenDeep([input.stderr]).filter(Boolean);
+    var both = flattenDeep([input.both]).filter(Boolean);
     var stdoutWrite = stdout.write;
     stdout.write = function () {
         for (var i = 0; i < _stdout.length; i++) {
